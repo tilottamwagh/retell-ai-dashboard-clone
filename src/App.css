@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-bg: #f9fafb;
+  --modal-bg: #ffffff;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+  
+  /* Deep purple to vivid blue gradient matching reference */
+  --header-grad: linear-gradient(135deg, #6c5ce7 0%, #0984e3 100%);
+  --bar-grad: linear-gradient(to top, #74b9ff 0%, #a29bfe 100%);
+  
+  --success-green: #00b894;
+  --success-bg: #d1fae5;
+  --insights-bg: #fffbf0; /* Pale yellow */
+  
+  /* Chart Colors */
+  --donut-blue: #0984e3;
+  --donut-teal: #00cec9;
+  --donut-orange: #fdcb6e;
+  --donut-red: #d63031;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Dark vibrant glow behind the modal */
+  background: radial-gradient(circle at center, #2d3436 0%, #000000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.dashboard-modal {
+  width: 100%;
+  max-width: 1200px;
+  background: var(--modal-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+/* General Typography Utils */
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+/* Hover Effects */
+.agent-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.agent-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.05) !important;
+  border-color: rgba(255,255,255,0.2) !important;
+}
+
+.start-btn {
+  transition: transform 0.2s ease, background-color 0.2s ease, filter 0.2s ease;
+}
+.start-btn:hover {
+  transform: scale(1.02);
+  filter: brightness(1.15);
+}
+
+.start-call-btn {
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease !important;
+}
+.start-call-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  box-shadow: 0 0 25px rgba(147, 51, 234, 0.6) !important;
+}
