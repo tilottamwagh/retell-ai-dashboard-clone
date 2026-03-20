@@ -7,10 +7,10 @@ export default function LoginPage({ onLogin }) {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === 'Rahul' && password === 'Rahul@1234') {
+    if (username === 'Samarth' && password === 'Samarth@202288') {
       onLogin();
     } else {
-      setError('Invalid credentials. Please use Rahul / Rahul@1234');
+      setError('Invalid credentials. Please try again.');
     }
   };
 
